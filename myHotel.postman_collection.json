@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "55ea68f4-1f9a-4d25-8563-1f09bf6fe727",
+		"name": "mirest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ms-arriendos",
+			"item": [
+				{
+					"name": "vehiculos",
+					"item": [
+						{
+							"name": "listar_vehiculo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}/listar",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "detalle_vehiculos_por_patente",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{local}}/buscar/99",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"buscar",
+										"99"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "guardar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"patente\": \"AC-22223\",\r\n\t\"vehiculo\": \"AUTOMOVIL\",\r\n    \"marca\":\"AUDIx\",\r\n    \"modelo\": \"A4\",\r\n\t\"tipo\":\"SEDAN\",\r\n\t\"anio\": 2022 ,\r\n\t\"kilometraje\": 10000,\r\n\t\"cilindrada\": 1241,\r\n\t\"mantenciones\": 1,\r\n\t\"capacidadToneladas\":null,\r\n\t\"cantidadEjes\": null,\r\n    \"numPuertas\": 4,\r\n    \"capacidadPasajeros\":\"5\" ,\r\n    \"capacidadMaleteros\": \"200\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}/guardar",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"guardar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminar",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local}}/eliminar/102",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"eliminar",
+										"102"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "editar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : 555,\r\n    \"marca\":\"Mercedez 13\",\r\n    \"modelo\": \"A\",\r\n\t\"patente\": \"AC-2222\",\r\n\t\"anio\": \"2020\" ,\r\n\t\"kilometraje\": \"1000\",\r\n\t\"cilindrada\": \"1241\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}/editar",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"editar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
